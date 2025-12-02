@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 14%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 14%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 30% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 30% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 30% 22%;
+    --input: 222 30% 22%;
+    --ring: 199 89% 48%;
+
+    --radius: 0.75rem;
+
+    /* AQI Color Scale */
+    --aqi-good: 142 76% 36%;
+    --aqi-moderate: 45 93% 47%;
+    --aqi-sensitive: 27 96% 61%;
+    --aqi-unhealthy: 4 90% 58%;
+    --aqi-very-unhealthy: 340 82% 52%;
+    --aqi-hazardous: 291 64% 42%;
+
+    /* Dashboard specific */
+    --dashboard-bg: 222 47% 11%;
+    --chart-grid: 222 30% 25%;
+    --sensor-card: 222 47% 16%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(199 89% 48%), hsl(199 89% 60%));
+    --gradient-card: linear-gradient(145deg, hsl(222 47% 14%), hsl(222 30% 18%));
+    --gradient-aqi: linear-gradient(135deg, hsl(199 89% 48% / 0.2), hsl(199 89% 60% / 0.1));
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(0 0% 0% / 0.4);
+    --shadow-md: 0 4px 16px -4px hsl(0 0% 0% / 0.5);
+    --shadow-lg: 0 8px 24px -6px hsl(0 0% 0% / 0.6);
+    --shadow-glow: 0 0 20px hsl(199 89% 48% / 0.3);
+    --shadow-glow-green: 0 0 20px hsl(142 76% 36% / 0.4);
+    --shadow-glow-red: 0 0 20px hsl(4 90% 58% / 0.4);
+
+    --sidebar-background: 222 47% 13%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 30% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 30% 22%;
+    --sidebar-ring: 199 89% 48%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 14%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 14%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 30% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 30% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 30% 22%;
+    --input: 222 30% 22%;
+    --ring: 199 89% 48%;
+
+    --dashboard-bg: 222 47% 11%;
+    --chart-grid: 222 30% 25%;
+    --sensor-card: 222 47% 16%;
+
+    --shadow-sm: 0 2px 8px -2px hsl(0 0% 0% / 0.4);
+    --shadow-md: 0 4px 16px -4px hsl(0 0% 0% / 0.5);
+    --shadow-lg: 0 8px 24px -6px hsl(0 0% 0% / 0.6);
+    --shadow-glow: 0 0 20px hsl(199 89% 48% / 0.3);
+
+    --sidebar-background: 222 47% 13%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 30% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 30% 22%;
+    --sidebar-ring: 199 89% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
